@@ -18,7 +18,27 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "fmt": "prettier --write '**/*.{ts,json,css,scss,md}'"
+    "fmt": "prettier --write '**/*.{ts,json,css,scss,md}'",
+    "prepare": "husky install",
+    "postinstall": "([ \"$CI\" != true ]) && npm run test:update-baselines || exit 0",
+    "checktypes": "tsc --noEmit",
+    "eslint:check": "eslint \"**/*.cjs\" \"**/*.ts\" \"**/*.js\" \"**/*.json\"",
+    "eslint:fix": "npm run eslint:check --silent -- --fix",
+    "fix": "npm run prettier:format --silent && npm run eslint:fix --silent && npm run stylelint:fix --silent",
+    "lint": "npm run eslint:check --silent && npm run prettier:check --silent && npm run stylelint:check --silent",
+    "presubmit:base": "npm run lint && npm run checktypes && npm run build",
+    "presubmit": "npm run presubmit:base && npm run test:small",
+    "presubmit:coverage": "npm run presubmit:base && npm test -- --coverage",
+    "prettier:base": "prettier --config .prettierrc.cjs --ignore-path '.gitignore' .",
+    "prettier:check": "npm run prettier:base --silent -- --check",
+    "prettier:format": "npm run prettier:base --silent -- --write",
+    "stylelint:check": "stylelint '**/*.css' '**/*.ts' --ignore-path '.gitignore'",
+    "stylelint:fix": "npm run stylelint:check --silent -- --fix",
+    "test": "wtr \"extension/test/*_test.ts\"",
+    "test:small": "wtr --files \"extension/test/background_test.ts\" \"extension/test/data_test.ts\" \"extension/test/docs-annotate-canvas_test.ts\" \"extension/test/rikaicontent_test.ts\"",
+    "test:browserstack": "npm run test -- --browserstack",
+    "test:watch": "npm run test -- --watch",
+    "test:update-baselines": "npm run test -- --update-visual-baseline"
   },
   "dependencies": {
     "lit": "^2.2.6",
