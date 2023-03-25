@@ -83,5 +83,67 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.0.2",
     "vite": "^2.9.13"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogTitle": "# Changelog\n\nStarting with 1.0.0 nanisore uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html) to\nconsistently version releases as follows:\n\n- Major: Minimum required chrome version advances.\n- Minor: New user visible feature added. (contains feat commits)\n- Patch: Bug fix to previous feature. (contains only fix commits)"
+        }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "npm run fix && npm run lint && npm run build"
+        }
+      ],
+      [
+        "semantic-release-chrome",
+        {
+          "asset": "nanisore.zip",
+          "extensionId": "jipdnfibhldikgcjhfnomkfpcebammhp"
+        }
+      ],
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "cp build/manifest.json extension/manifest.ts && npm run fix && npm run lint && npm i"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "src/manifest.ts",
+            "package.json",
+            "package-lock.json"
+          ],
+          "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "nanisore.zip",
+              "name": "nanisore_${nextRelease.gitTag}.zip",
+              "label": "Packaged chrome extension (${nextRelease.gitTag})"
+            }
+          ],
+          "addReleases": "top"
+        }
+      ]
+    ],
+    "preset": "conventionalcommits",
+    "branches": [
+      "main"
+    ],
+    "repositoryUrl": "git@github.com:tora-pan/nanisore.git"
   }
 }
