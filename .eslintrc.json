@@ -5,7 +5,6 @@
     "plugin:import/recommended",
     "plugin:lit/recommended",
     "plugin:promise/recommended",
-    "plugin:mocha/recommended",
     "prettier"
   ],
   "env": {
@@ -32,9 +31,7 @@
     "no-tabs": "error",
     "sort-imports-es6-autofix/sort-imports-es6": "error",
     "unicode-bom": "error",
-    "promise/prefer-await-to-then": "error",
-    "curly": "error",
-    "mocha/prefer-arrow-callback": "error"
+    "curly": "error"
   },
   "overrides": [
     {
@@ -46,7 +43,7 @@
       ],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
-        "project": "./tsconfig.json"
+        // "project": "./tsconfig.json"
       },
       "rules": {
         // TODO(#792): Remove/evaluate following rules once errors are fixed.
@@ -72,11 +69,9 @@
     {
       // Enumeration of node scripts and configs.
       "files": [
-        "web-test-runner.config.js",
         "utils/*",
-        "snowpack.config.cjs",
         "commitlint.config.cjs",
-        ".prettierrc.cjs"
+        ".prettierrc"
       ],
       "env": {
         "node": true

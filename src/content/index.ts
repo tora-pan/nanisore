@@ -1,6 +1,6 @@
 type Config = {
   popupLocation: 0;
-  popupColor: "";
+  popupColor: '';
 };
 type Popup = {
   text: string;
@@ -35,25 +35,25 @@ class Content {
   enableTab(config: Config) {
     if (window.contentWindow === undefined) {
       window.contentWindow = { config: config };
-      window.addEventListener("mousemove", this.onMouseMove, false);
-      window.addEventListener("keydown", this.onKeyDown, true);
-      window.addEventListener("keyup", this.onKeyUp, true);
-      window.addEventListener("mousedown", this.onMouseDown, false);
-      window.addEventListener("mouseup", this.onMouseUp, false);
+      window.addEventListener('mousemove', this.onMouseMove, false);
+      window.addEventListener('keydown', this.onKeyDown, true);
+      window.addEventListener('keyup', this.onKeyUp, true);
+      window.addEventListener('mousedown', this.onMouseDown, false);
+      window.addEventListener('mouseup', this.onMouseUp, false);
     }
     window.contentWindow.config = config;
     this.altView = config.popupLocation;
   }
   disableTab() {
     if (window.contentWindow !== undefined) {
-      window.removeEventListener("mousemove", this.onMouseMove, false);
-      window.removeEventListener("keydown", this.onKeyDown, true);
-      window.removeEventListener("keyup", this.onKeyUp, true);
-      window.removeEventListener("mousedown", this.onMouseDown, false);
-      window.removeEventListener("mouseup", this.onMouseUp, false);
+      window.removeEventListener('mousemove', this.onMouseMove, false);
+      window.removeEventListener('keydown', this.onKeyDown, true);
+      window.removeEventListener('keyup', this.onKeyUp, true);
+      window.removeEventListener('mousedown', this.onMouseDown, false);
+      window.removeEventListener('mouseup', this.onMouseUp, false);
 
       // disable/remove windows
-      let contentWindow = document.getElementById("content-window");
+      const contentWindow = document.getElementById('content-window');
       if (contentWindow?.parentNode) {
         contentWindow.parentNode.removeChild(contentWindow);
       }
@@ -63,24 +63,24 @@ class Content {
 
   showPopup({ text, elem, looseWidth, x = 0, y = 0 }: Popup) {
     const mainDoc = window.document;
-    const css = mainDoc.createElement("link");
-    css.setAttribute("rel", "stylesheet");
-    css.setAttribute("href", chrome.extension.getURL("css/content.css"));
+    const css = mainDoc.createElement('link');
+    css.setAttribute('rel', 'stylesheet');
+    css.setAttribute('href', chrome.extension.getURL('css/content.css'));
     if (isNaN(x) || isNaN(y)) {
       x = y = 0;
     }
-    let popup = mainDoc.getElementById("content-window");
+    let popup = mainDoc.getElementById('content-window');
     if (!popup) {
       //render popup
-      popup = mainDoc.createElementNS("http://www.w3.org/1999/xhtml", "div");
-      popup.setAttribute("id", "content-window");
-      popup.setAttribute("lang", "ja");
-      popup.attachShadow({ mode: "open" });
+      popup = mainDoc.createElementNS('http://www.w3.org/1999/xhtml', 'div');
+      popup.setAttribute('id', 'content-window');
+      popup.setAttribute('lang', 'ja');
+      popup.attachShadow({ mode: 'open' });
 
       mainDoc.body.appendChild(popup);
 
       popup.addEventListener(
-        "dblclick",
+        'dblclick',
         (ev: Event) => {
           this.hidePopup();
           ev.stopPropagation();
@@ -88,31 +88,31 @@ class Content {
         true,
       );
 
-      const shadowcontainer = mainDoc.createElement("div");
-      shadowcontainer.setAttribute("id", "content-shadow");
+      const shadowcontainer = mainDoc.createElement('div');
+      shadowcontainer.setAttribute('id', 'content-shadow');
       popup.shadowRoot!.appendChild(css);
       popup.shadowRoot!.appendChild(shadowcontainer);
     }
-    const shadowContainer = this.getContentPopup(popup!);
-    shadowContainer.setAttribute("data-theme", window.contentWindow!.config.popupColor);
-    shadowContainer.style.width = "auto";
-    shadowContainer.style.height = "auto";
-    shadowContainer.style.maxWidth = looseWidth ? "" : "600px";
+    const shadowContainer = this.getContentPopup(popup);
+    shadowContainer.setAttribute('data-theme', window.contentWindow!.config.popupColor);
+    shadowContainer.style.width = 'auto';
+    shadowContainer.style.height = 'auto';
+    shadowContainer.style.maxWidth = looseWidth ? '' : '600px';
     shadowContainer.innerHTML = text;
 
     if (elem) {
       // move popup off screen and recalculate size
-      shadowContainer.className = "";
-      shadowContainer.classList.add("resizeHidden");
+      shadowContainer.className = '';
+      shadowContainer.classList.add('resizeHidden');
       // positioning of popup logic goes here
     }
   }
 
   hidePopup() {
-    const popup = document.getElementById("content-window");
+    const popup = document.getElementById('content-window');
     if (popup) {
-      this.getContentPopup(popup).style.display = "none";
-      this.getContentPopup(popup).innerHTML = "";
+      this.getContentPopup(popup).style.display = 'none';
+      this.getContentPopup(popup).innerHTML = '';
     }
   }
 
@@ -126,7 +126,7 @@ class Content {
   highlightWord() {}
 
   private getContentPopup(popup: HTMLElement): HTMLDivElement {
-    return popup.shadowRoot!.querySelector<HTMLDivElement>("#content-shadow")!;
+    return popup.shadowRoot!.querySelector<HTMLDivElement>('#content-shadow')!;
   }
 }
 
@@ -134,21 +134,21 @@ const content = new Content();
 
 chrome.runtime.onMessage.addListener((request) => {
   switch (request.type) {
-    case "enable":
+    case 'enable':
       //enable it
       content.enableTab(request.config);
       break;
-    case "disable":
+    case 'disable':
       content.disableTab();
       break;
-    case "showPopup":
+    case 'showPopup':
       content.showPopup(request.text);
       break;
     default:
-      console.log("default case from content.ts");
+      console.log('default case from content.ts');
   }
 });
 
-chrome.runtime.sendMessage({ type: "enable?" });
+chrome.runtime.sendMessage({ type: 'enable?' });
 
 export { Content as TestOnlyContent }; //stop errors

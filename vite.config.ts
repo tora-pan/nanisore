@@ -1,6 +1,6 @@
 import * as path from 'path'
-import { defineConfig } from 'vite'
 import { crx } from '@crxjs/vite-plugin'
+import { defineConfig } from 'vite'
 
 import manifest from './src/manifest'
 

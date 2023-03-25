@@ -1,5 +1,5 @@
 const defaultConfig = {
-  popupcolor: "blue",
+  popupcolor: 'blue',
   popupLocation: 0,
 };
 type MutableConfig = typeof defaultConfig;

@@ -1,4 +1,4 @@
-console.info("background script activated");
+console.info('background script activated');
 
 chrome.runtime.onMessage.addListener((request, sender, response) => {
   console.log(request);
