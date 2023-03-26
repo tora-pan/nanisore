@@ -9,7 +9,7 @@ export class Options extends LitElement {
   @property()
   crx = "create-chrome-ext";
 
-  render() {
+  override render() {
     return html`
       <main>
         <h3>Options Page!</h3>
@@ -25,7 +25,7 @@ export class Options extends LitElement {
     `;
   }
 
-  static styles = css`
+  static override styles = css`
     :root {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
         "Open Sans", "Helvetica Neue", sans-serif;
