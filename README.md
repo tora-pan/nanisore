@@ -33,19 +33,7 @@
 
 ## Background
 
-rikaikun is a port of [Rikaichan](https://www.polarcloud.com/getrcx/) I started in 2010 when Chrome released its extension API. It was originally hosted on Google Code until Google Code was canceled and everything was migrated to GitHub.
-
-Rikaichan was a Firefox extension that emulated the popup translations of RikaiXUL. It was the best Japanese-to-English inline translation tool in the browser.
-
-I started with the idea that I would create the Chrome equivalent of Rikaichan from scratch using my own ideas. However, after I tried Rikaichan, I realized that it was already quite good, and starting from scratch would be wasting the excellent work of its developers. Instead, I forked Rikaichan and updated the APIs to work with the Chrome extension model.
-
-In 2018, Firefox killed the extension model that Rikaichan was based on, but other similar extensions have since been created and ported to various browsers. Not much was happening with rikaikun during that time but we've started to work on it again!
-
 ### Current Goals
-
-- Refactor code base such that it becomes very easy to maintain and contribute to.
-- Fix bugs in dictionary output.
-- Work on new features like other dictionaries, OCR, and static popup/lookup bar. Feel free to suggest/:thumbsup: more.
 
 ## Install
 
@@ -59,58 +47,19 @@ Visit rikaikun on [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/a
 
 ### As an Unpacked Extension
 
-You can also install rikaikun from the source as an unpacked extension:
-
-- Get the [latest release](https://github.com/melink14/rikaikun/releases/latest) from Github:
-- Follow [these instructions](https://github.com/web-scrobbler/web-scrobbler/wiki/Install-an-unpacked-extension) from the web-scrobbler Chrome extension. (substituting rikaikun where appropriate)
-
 ## Usage
-
-Activate the extension by clicking on the 理 in the top right. When the introductory pop up appears, rikaikun is ready for action.
-
-When rikaikun is active, hovering over Japanese words will trigger a translation pop-up.
-
-See it in action in this [Youtube demo](https://www.youtube.com/watch?v=DFRTt6d0s3c) by [Tariq Sheikh](https://www.youtube.com/channel/UCRAL2bcBZ1Cw-xyPwelpi8A).
 
 ### Features
 
-- Read out the Japanese words using Chrome Text To Speech capabilities. (Off by default)
-- Change where the popup appears on your screen. (Where your mouse cursor is by default)
-- Copy current definitions to they keyboard.
-- Add a delay before popup is shown to avoid constant distractions.
-- Require a modifier key to be held down in order to see popups.
-- Hide definitions to see only the readings of words.
-
 ### Options
-
-You can access the options from [the extension page](chrome://extensions/?options=jipdnfibhldikgcjhfnomkfpcebammhp) if you have it installed or by right clicking on the rikaikun icon.
 
 #### Keyboard Shortcuts
 
-<!-- Generated with https://www.tablesgenerator.com/markdown_tables -->
-
-| Key         | Explanation                |
-| ----------- | -------------------------- |
-| A           | Alternate popup location   |
-| Y           | Move popup location down   |
-| C           | Copy to clipboard          |
-| D           | Hide/show definitions      |
-| Shift/Enter | Switch dictionaries        |
-| B           | Previous character         |
-| M           | Next character             |
-| N           | Next word                  |
-| J           | Scroll back definitions    |
-| K           | Scroll forward definitions |
-
 ## Maintainers
 
-[@melink14](https://github.com/melink14)
+[@tora-pan](https://github.com/tora-pan)
 
 ## Credits
-
-- [Jon Zarate](https://www.polarcloud.com/) for their work on [Rikaichan](https://www.polarcloud.com/getrcx/)
-- [Todd Rudick](http://www.rikai.com) for their work on the original [RikaiXUL](http://rikaixul.mozdev.org)
-- This extension uses [JMdict/EDICT](http://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) and [KANJIDIC](http://www.edrdg.org/wiki/index.php/KANJIDIC_Project) dictionary files. These files are the property of the [Electronic Dictionary Research and Development Group](http://www.edrdg.org/), and are used in conformance with the Group's [licence](http://www.edrdg.org/edrdg/licence.html).
 
 ## Contributing
 
