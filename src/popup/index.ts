@@ -1,5 +1,5 @@
-import { LitElement, css, html } from "lit"
-import { customElement, property } from "lit/decorators.js"
+import { LitElement, css, html } from "lit";
+import { customElement, property } from "lit/decorators.js";
 
 /**
  * popup
@@ -7,7 +7,7 @@ import { customElement, property } from "lit/decorators.js"
 @customElement("popup")
 export class Popup extends LitElement {
   @property()
-  crx = "create-chrome-ext"
+  crx = "create-chrome-ext";
 
   render() {
     return html`
@@ -22,13 +22,13 @@ export class Popup extends LitElement {
           >Generator by ${this.crx}</a
         >
       </main>
-    `
+    `;
   }
 
   static styles = css`
     :root {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-        'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
     }
 
     :global(body) {
@@ -68,11 +68,11 @@ export class Popup extends LitElement {
         max-width: none;
       }
     }
-  `
+  `;
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    popup: Popup
+    popup: Popup;
   }
 }

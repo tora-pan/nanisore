@@ -55,10 +55,7 @@
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/unbound-method": "off",
         // End of rules to fix.
-        "@typescript-eslint/no-empty-function": [
-          "error",
-          { "allow": ["private-constructors"] }
-        ],
+        "@typescript-eslint/no-empty-function": ["error", { "allow": ["private-constructors"] }],
         "tsdoc/syntax": "error"
       },
       "settings": {
@@ -69,11 +66,7 @@
     },
     {
       // Enumeration of node scripts and configs.
-      "files": [
-        "utils/*",
-        "commitlint.config.cjs",
-        ".prettierrc"
-      ],
+      "files": ["utils/*", "commitlint.config.cjs", ".prettierrc"],
       "env": {
         "node": true
       },

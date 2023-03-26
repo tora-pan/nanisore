@@ -1,8 +1,8 @@
-import * as path from "path"
-import { crx } from "@crxjs/vite-plugin"
-import { defineConfig } from "vite"
+import * as path from "path";
+import { crx } from "@crxjs/vite-plugin";
+import { defineConfig } from "vite";
 
-import manifest from "./src/manifest"
+import manifest from "./src/manifest";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -20,4 +20,4 @@ export default defineConfig({
     },
   },
   plugins: [crx({ manifest })],
-})
+});
