@@ -71,7 +71,7 @@ Small note: If editing the README, please conform to the [standard-readme](https
 
 ### Contributors ✨
 
-!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
