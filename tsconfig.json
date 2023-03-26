@@ -1,23 +1,34 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "outDir": "./types",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "Node",
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
+    "plugins": [
+      {
+        "name": "ts-lit-plugin",
+        "strict": true
+      }
+    ],
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
     "forceConsistentCasingInFileNames": true,
-    "useDefineForClassFields": false,
-    "skipLibCheck": true
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "pretty": true,
+    "sourceMap": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "rootDir": ".",
+    "outDir": "dist",
+    "lib": ["ES2018", "DOM", "DOM.Iterable"],
+    "esModuleInterop": true,
+    "declaration": false,
+    // ES2020 corresponds to Chrome 80+
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "target": "ES2020",
+    // Added for compatibility with snowback/esbuild builder.
+    "isolatedModules": true
   },
-  "include": ["**/*.ts", "**/**/*.ts", "src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["**/*.ts", "vite.config.ts"],
+  "exclude": ["node_modules"]
 }

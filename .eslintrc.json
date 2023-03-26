@@ -12,7 +12,7 @@
     "webextensions": true
   },
   "plugins": ["import", "eslint-plugin-tsdoc", "sort-imports-es6-autofix"],
-  "ignorePatterns": ["build", "types"],
+  "ignorePatterns": ["build"],
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
@@ -31,6 +31,7 @@
     "no-tabs": "error",
     "sort-imports-es6-autofix/sort-imports-es6": "error",
     "unicode-bom": "error",
+    "promise/prefer-await-to-then": "error",
     "curly": "error"
   },
   "overrides": [
@@ -53,9 +54,12 @@
         "@typescript-eslint/restrict-plus-operands": "off",
         "import/no-named-as-default-member": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/unbound-method": "off",
+        "@typescript-eslint/unbound-method": "warn",
         // End of rules to fix.
-        "@typescript-eslint/no-empty-function": ["error", { "allow": ["private-constructors"] }],
+        "@typescript-eslint/no-empty-function": [
+          "error",
+          { "allow": ["private-constructors"] }
+        ],
         "tsdoc/syntax": "error"
       },
       "settings": {
@@ -66,7 +70,12 @@
     },
     {
       // Enumeration of node scripts and configs.
-      "files": ["utils/*", "commitlint.config.cjs", ".prettierrc"],
+      "files": [
+        "web-test-runner.config.js",
+        "commitlint.config.cjs",
+        ".prettierrc.cjs",
+        "src/**/*.{ts,tsx}"
+      ],
       "env": {
         "node": true
       },

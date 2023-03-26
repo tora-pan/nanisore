@@ -4,5 +4,9 @@ dist
 dist-ssr
 *.local
 node_modules/*
+build
 
-src/manifest
+.eslintrc.json
+ios/
+android/
+*.config.js
