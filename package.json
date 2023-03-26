@@ -27,7 +27,7 @@
     "presubmit:base": "npm run lint && npm run checktypes && npm run build",
     "presubmit": "npm run presubmit:base && npm run test:small",
     "presubmit:coverage": "npm run presubmit:base && npm test -- --coverage",
-    "prettier:base": "prettier --config .prettierrc.cjs --ignore-path '.gitignore' .",
+    "prettier:base": "prettier --config .prettierrc --ignore-path '.gitignore' .",
     "prettier:check": "npm run prettier:base --silent -- --check",
     "prettier:format": "npm run prettier:base --silent -- --write",
     "stylelint:check": "stylelint '**/*.css' '**/*.ts' --ignore-path '.gitignore'",
