@@ -18,6 +18,6 @@
     "useDefineForClassFields": false,
     "skipLibCheck": true
   },
-  "include": ["**/*.ts", "**/**/*.ts", "src", "src/manifest.ts"],
+  "include": ["**/*.ts", "**/**/*.ts", "src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
