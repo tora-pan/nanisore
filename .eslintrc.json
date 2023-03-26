@@ -12,7 +12,7 @@
     "webextensions": true
   },
   "plugins": ["import", "eslint-plugin-tsdoc", "sort-imports-es6-autofix"],
-  "ignorePatterns": ["dist"],
+  "ignorePatterns": ["build", "types"],
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
@@ -26,7 +26,7 @@
     "prefer-const": "error",
     "eol-last": "error",
     "no-trailing-spaces": "error",
-    "quotes": ["warn", "single", { "avoidEscape": true }],
+    "quotes": ["warn", "double", { "avoidEscape": true }],
     "linebreak-style": ["error", "unix"],
     "no-tabs": "error",
     "sort-imports-es6-autofix/sort-imports-es6": "error",
@@ -43,7 +43,7 @@
       ],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
-        // "project": "./tsconfig.json"
+        "project": "./tsconfig.json"
       },
       "rules": {
         // TODO(#792): Remove/evaluate following rules once errors are fixed.
@@ -53,6 +53,7 @@
         "@typescript-eslint/restrict-plus-operands": "off",
         "import/no-named-as-default-member": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/unbound-method": "off",
         // End of rules to fix.
         "@typescript-eslint/no-empty-function": [
           "error",

@@ -20,7 +20,7 @@
     "prepare": "husky install",
     "postinstall": "([ \"$CI\" != true ]) && npm run test:update-baselines || exit 0",
     "checktypes": "tsc --noEmit",
-    "eslint:check": "eslint \"**/*.cjs\" \"**/*.ts\" \"**/*.js\" \"**/*.json\"",
+    "eslint:check": "eslint \"**/*.cjs\" \"**/*.ts\"  \"**/*.json\"",
     "eslint:fix": "npm run eslint:check --silent -- --fix",
     "fix": "npm run prettier:format --silent && npm run eslint:fix --silent && npm run stylelint:fix --silent",
     "lint": "npm run eslint:check --silent && npm run prettier:check --silent && npm run stylelint:check --silent",

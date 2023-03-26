@@ -1,13 +1,13 @@
-import { LitElement, css, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { LitElement, css, html } from "lit"
+import { customElement, property } from "lit/decorators.js"
 
 /**
  * options
  */
-@customElement('options')
+@customElement("options")
 export class Options extends LitElement {
   @property()
-  crx = 'create-chrome-ext'
+  crx = "create-chrome-ext"
 
   render() {
     return html`

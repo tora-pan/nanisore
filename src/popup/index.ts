@@ -1,13 +1,13 @@
-import { LitElement, css, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { LitElement, css, html } from "lit"
+import { customElement, property } from "lit/decorators.js"
 
 /**
  * popup
  */
-@customElement('popup')
+@customElement("popup")
 export class Popup extends LitElement {
   @property()
-  crx = 'create-chrome-ext'
+  crx = "create-chrome-ext"
 
   render() {
     return html`

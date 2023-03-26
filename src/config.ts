@@ -1,19 +1,19 @@
 const defaultConfig = {
-  popupcolor: 'blue',
+  popupcolor: "blue",
   popupLocation: 0,
 };
 type MutableConfig = typeof defaultConfig;
 type Config = Readonly<MutableConfig>;
 
 // Simply wrapper which makes `sync.get` `Promise` based.
-async function getStorage(): Promise<MutableConfig> {
-  const config = await new Promise<MutableConfig>((resolve) => {
-    chrome.storage.sync.get(defaultConfig, (cloudStorage) => {
-      resolve(cloudStorage as MutableConfig);
-    });
-  });
-  return config;
-}
+// async function getStorage(): Promise<MutableConfig> {
+//   const config = await new Promise<MutableConfig>((resolve) => {
+//     chrome.storage.sync.get(defaultConfig, (cloudStorage) => {
+//       resolve(cloudStorage as MutableConfig);
+//     });
+//   });
+//   return config;
+// }
 
 // function isLegacyKanjiInfo(
 //   kanjiInfo: unknown[] | Record<string, unknown>,
