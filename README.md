@@ -1,8 +1,4 @@
 # nanisore
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 > a chrome extension to help native Japanese speakers learn English
 
 <!-- [![Mergify Status](https://img.shields.io/endpoint.svg?url=https://api.mergify.com/v1/badges/melink14/rikaikun&style=flat)](https://mergify.com)
@@ -31,7 +27,7 @@
 - [Maintainers](#maintainers)
 - [Credits](#credits)
 - [Contributing](#contributing)
-  - [Contributors ✨](#contributors)
+  - [Contributors ✨](#contributors-)
 - [License](#license)
 
 ## Background
@@ -39,12 +35,6 @@
 ### Current Goals
 
 ## Install
-
-### Via the Chrome Web Store
-
-### Via Microsoft Edge Add-ons
-
-### As an Unpacked Extension
 
 ## Usage
 
