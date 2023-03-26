@@ -13,7 +13,7 @@
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 [![Standard Readme Compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat)](https://github.com/RichardLitt/standard-readme)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat)](https://conventionalcommits.org)
-[![All Contributors](https://img.shields.io/github/all-contributors/tora-pan/nanisore?color=orange)](#contributors)
+[![All Contributors](https://img.shields.io/github/all-contributors/tora-pan/nanisore?color=ee8449&style=flat-square)](#contributors)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
 ## Table of Contents <!-- omit in toc -->
