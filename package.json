@@ -43,14 +43,14 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@crxjs/vite-plugin": "^1.0.12",
-    "@types/chrome": "^0.0.225",
     "@commitlint/cli": "^17.5.0",
     "@commitlint/config-conventional": "^17.4.4",
+    "@crxjs/vite-plugin": "^1.0.12",
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@stylelint/postcss-css-in-js": "^0.38.0",
+    "@types/chrome": "^0.0.225",
     "@types/node": "^18.15.5",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
