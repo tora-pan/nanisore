@@ -5,6 +5,7 @@
     "plugin:import/recommended",
     "plugin:lit/recommended",
     "plugin:promise/recommended",
+    "plugin:mocha/recommended",
     "prettier"
   ],
   "env": {
@@ -32,7 +33,8 @@
     "sort-imports-es6-autofix/sort-imports-es6": "error",
     "unicode-bom": "error",
     "promise/prefer-await-to-then": "error",
-    "curly": "error"
+    "curly": "error",
+    "mocha/no-mocha-arrows": "off"
   },
   "overrides": [
     {
@@ -70,6 +72,7 @@
       "files": [
         "web-test-runner.config.js",
         "commitlint.config.cjs",
+        "snowpack.config.cjs",
         ".prettierrc.cjs",
         "src/**/*.{ts,tsx}"
       ],
@@ -85,7 +88,8 @@
       },
       "extends": ["plugin:node/recommended"],
       "rules": {
-        "node/no-unpublished-import": "off"
+        "node/no-unpublished-import": "off",
+        "node/no-missing-import": "off"
       }
     }
   ]

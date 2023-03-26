@@ -5,8 +5,6 @@ import { customElement, property } from "lit/decorators.js";
 @customElement("popup")
 export class Popup extends LitElement {
   @property()
-  crx = "create-chrome-ext";
-
   override render() {
     return html`
       <main>
@@ -15,10 +13,6 @@ export class Popup extends LitElement {
         <h6>v 0.0.0</h6>
 
         <slot></slot>
-
-        <a href="https://www.npmjs.com/package/create-chrome-ext" target="_blank"
-          >Generator by ${this.crx}</a
-        >
       </main>
     `;
   }
