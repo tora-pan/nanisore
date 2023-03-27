@@ -17,14 +17,6 @@
 
 - [Background](#background)
   - [Current Goals](#current-goals)
-- [Install](#install)
-  - [Via the Chrome Web Store](#via-the-chrome-web-store)
-  - [Via Microsoft Edge Add-ons](#via-microsoft-edge-add-ons)
-  - [As an Unpacked Extension](#as-an-unpacked-extension)
-- [Usage](#usage)
-  - [Features](#features)
-  - [Options](#options)
-    - [Keyboard Shortcuts](#keyboard-shortcuts)
 - [Maintainers](#maintainers)
 - [Credits](#credits)
 - [Contributing](#contributing)
@@ -33,23 +25,17 @@
 
 ## Background
 
+The idea for `nanisore` came about after I connected with the maintainer of [rikaikun](https://github.com/melink14/rikaikun) and started contributing to the project. I showed many friends and family members and one in specific asked if I could make her something similar but for learning English as a Japanese native.  
+<br>
+`nanisore` is exactly that!
+<br>  
+A way for Japanese natives to accelerate their English studies and help them with the day to day obstacles with learning English.
+
 ### Current Goals
 
-## Install
-
-### Via the Chrome Web Store
-
-### Via Microsoft Edge Add-ons
-
-### As an Unpacked Extension
-
-## Usage
-
-### Features
-
-### Options
-
-#### Keyboard Shortcuts
+- Finish getting the project bootstrapped.
+- Flesh out the initial feature goals.
+- Set up tests and begin implementation.
 
 ## Maintainers
 
@@ -57,11 +43,13 @@
 
 ## Credits
 
+[@melink14](https://github.com/melink14) has been a huge help and continues to share loads of knowledge and best practices with me. Without him, I wouldn't have even thought about going about this project.
+
 ## Contributing
 
 Contribute by submitting pull requests, filing bug reports, requesting features and more!
 
-See the [contributing file](CONTRIBUTING.md) for the full details!
+See the [contributing file](CONTRIBUTING.md) for the full details! (COMING SOON!)
 
 Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
