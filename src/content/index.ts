@@ -107,16 +107,23 @@ class Content {
       shadowContainer.classList.add("resizeHidden");
       // positioning of popup logic goes here
     }
+    shadowContainer.style.left = x.toString();
+    shadowContainer.style.top = y.toString();
   }
 
   movePopup(ev: MouseEvent) {
     // todo
     console.log(ev);
+    const mainDoc = window.document;
+    const popup = mainDoc && mainDoc.getElementById("content-window");
+    this.getContentPopup(popup!).style.left = ev.x.toString();
+    this.getContentPopup(popup!).style.top = ev.y.toString();
   }
 
   onMouseMove(ev: MouseEvent) {
     // todo
     console.log(ev);
+    this.movePopup(ev);
   }
   onKeyDown(ev: KeyboardEvent) {
     // todo

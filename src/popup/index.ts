@@ -1,10 +1,7 @@
 import { LitElement, css, html } from "lit";
-import { customElement, property } from "lit/decorators.js";
 
 /** Popup */
-@customElement("popup")
 export class Popup extends LitElement {
-  @property()
   override render() {
     return html`
       <main>
@@ -23,35 +20,35 @@ export class Popup extends LitElement {
         "Open Sans", "Helvetica Neue", sans-serif;
     }
 
-    :global(body) {
+    /* :global(body) {
       min-width: 20rem;
-    }
+    } */
 
     main {
-      text-align: center;
-      padding: 1em;
       margin: 0 auto;
+      padding: 1em;
+      text-align: center;
     }
 
     h3 {
-      color: #3355ff;
-      text-transform: uppercase;
+      color: #35f;
       font-size: 1.5rem;
       font-weight: 200;
       line-height: 1.2rem;
       margin: 2rem auto;
+      text-transform: uppercase;
     }
 
     h6 {
+      color: #333;
       font-size: 0.5rem;
-      color: #333333;
       margin: 0.5rem;
     }
 
     a {
+      color: #ccc;
       font-size: 0.5rem;
       margin: 0.5rem;
-      color: #cccccc;
       text-decoration: none;
     }
 
@@ -63,8 +60,10 @@ export class Popup extends LitElement {
   `;
 }
 
-declare global {
-  interface HTMLElementTagNameMap {
-    popup: Popup;
-  }
-}
+customElements.define("popup-window", Popup);
+
+// declare global {
+//   interface HTMLElementTagNameMap {
+//     popup: Popup;
+//   }
+// }

@@ -1,4 +1,5 @@
 # nanisore
+
 > a chrome extension to help native Japanese speakers learn English
 
 <!-- [![Mergify Status](https://img.shields.io/endpoint.svg?url=https://api.mergify.com/v1/badges/melink14/rikaikun&style=flat)](https://mergify.com)
