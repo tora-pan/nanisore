@@ -13,7 +13,7 @@
     "webextensions": true
   },
   "plugins": ["import", "eslint-plugin-tsdoc", "sort-imports-es6-autofix"],
-  "ignorePatterns": ["build"],
+  "ignorePatterns": ["dist"],
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
@@ -27,14 +27,14 @@
     "prefer-const": "error",
     "eol-last": "error",
     "no-trailing-spaces": "error",
-    "quotes": ["warn", "double", { "avoidEscape": true }],
+    "quotes": ["warn", "single", { "avoidEscape": true }],
     "linebreak-style": ["error", "unix"],
     "no-tabs": "error",
     "sort-imports-es6-autofix/sort-imports-es6": "error",
     "unicode-bom": "error",
     "promise/prefer-await-to-then": "error",
     "curly": "error",
-    "mocha/no-mocha-arrows": "off"
+    "mocha/prefer-arrow-callback": "error"
   },
   "overrides": [
     {
@@ -56,7 +56,6 @@
         "@typescript-eslint/restrict-plus-operands": "off",
         "import/no-named-as-default-member": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/unbound-method": "off",
         // End of rules to fix.
         "@typescript-eslint/no-empty-function": ["error", { "allow": ["private-constructors"] }],
         "tsdoc/syntax": "error"
@@ -71,10 +70,10 @@
       // Enumeration of node scripts and configs.
       "files": [
         "web-test-runner.config.js",
-        "commitlint.config.cjs",
+        "utils/*",
         "snowpack.config.cjs",
-        ".prettierrc.cjs",
-        "src/**/*.{ts,tsx}"
+        "commitlint.config.cjs",
+        ".prettierrc.cjs"
       ],
       "env": {
         "node": true
@@ -88,8 +87,7 @@
       },
       "extends": ["plugin:node/recommended"],
       "rules": {
-        "node/no-unpublished-import": "off",
-        "node/no-missing-import": "off"
+        "node/no-unpublished-import": "off"
       }
     }
   ]
