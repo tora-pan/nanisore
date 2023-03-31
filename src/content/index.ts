@@ -86,7 +86,7 @@ class Content {
           this.hidePopup();
           ev.stopPropagation();
         },
-        true,
+        true
       );
 
       const shadowcontainer = mainDoc.createElement("div");
