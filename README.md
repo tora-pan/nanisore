@@ -1,7 +1,5 @@
 # nanisore
 
-> a chrome extension to help native Japanese speakers learn English
-
 <!-- [![Mergify Status](https://img.shields.io/endpoint.svg?url=https://api.mergify.com/v1/badges/melink14/rikaikun&style=flat)](https://mergify.com)
 [![codecov](https://codecov.io/gh/melink14/rikaikun/branch/main/graph/badge.svg?token=4nZ7madoqJ)](https://codecov.io/gh/melink14/rikaikun)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e342d582357449f38d9255c247e37159)](https://www.codacy.com/gh/melink14/rikaikun/dashboard?utm_source=github.com&utm_medium=referral&utm_content=melink14/rikaikun&utm_campaign=Badge_Grade) -->
@@ -12,6 +10,10 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat)](https://conventionalcommits.org)
 [![All Contributors](https://img.shields.io/github/all-contributors/tora-pan/nanisore?color=ee8449&style=flat-square)](#contributors)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](CODE_OF_CONDUCT.md)
+
+> a chrome extension to help native Japanese speakers learn English
+
+<hr>
 
 ## Table of Contents <!-- omit in toc -->
 
