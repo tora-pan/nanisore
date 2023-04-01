@@ -10,7 +10,6 @@
     "128": "assets/img/logo-128.png"
   },
   "action": {
-    "default_popup": "popup/popup.html",
     "default_icon": "assets/img/logo-48.png"
   },
   "options_page": "options/options.html",
