@@ -37,7 +37,7 @@
     "test:update-baselines": "npm run test -- --update-visual-baseline"
   },
   "dependencies": {
-    "lit": "^2.2.6",
+    "lit": "^2.7.1",
     "path": "^0.12.7"
   },
   "devDependencies": {
@@ -53,7 +53,7 @@
     "@types/chai": "^4.3.4",
     "@types/chai-like": "^1.1.1",
     "@types/chai-things": "^0.0.35",
-    "@types/chrome": "0.0.227",
+    "@types/chrome": "0.0.228",
     "@types/mocha": "^10.0.1",
     "@types/node": "^18.15.11",
     "@types/simulant": "^0.2.0",
