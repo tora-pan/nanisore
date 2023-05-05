@@ -37,7 +37,7 @@
     "test:update-baselines": "npm run test -- --update-visual-baseline"
   },
   "dependencies": {
-    "lit": "^2.7.3",
+    "lit": "^2.7.4",
     "path": "^0.12.7"
   },
   "devDependencies": {
