@@ -53,7 +53,7 @@
     "@types/chai": "^4.3.9",
     "@types/chai-like": "^1.1.1",
     "@types/chai-things": "^0.0.37",
-    "@types/chrome": "0.0.247",
+    "@types/chrome": "0.0.248",
     "@types/mocha": "^10.0.3",
     "@types/node": "^20.8.6",
     "@types/simulant": "^0.2.0",
