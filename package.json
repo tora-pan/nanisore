@@ -41,7 +41,7 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.8.0",
+    "@commitlint/cli": "^18.0.0",
     "@commitlint/config-conventional": "^17.8.0",
     "@esm-bundle/chai": "^4.3.4",
     "@semantic-release/changelog": "^6.0.3",
@@ -63,7 +63,7 @@
     "@typescript-eslint/parser": "^6.8.0",
     "@web/test-runner": "^0.17.2",
     "@web/test-runner-browserstack": "^0.6.2",
-    "@web/test-runner-commands": "^0.8.1",
+    "@web/test-runner-commands": "^0.8.2",
     "@web/test-runner-chrome": "^0.14.2",
     "@web/test-runner-puppeteer": "^0.14.1",
     "@web/test-runner-visual-regression": "^0.8.2",
