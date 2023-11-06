@@ -37,7 +37,7 @@
     "test:update-baselines": "npm run test -- --update-visual-baseline"
   },
   "dependencies": {
-    "lit": "^3.0.1",
+    "lit": "^3.0.2",
     "path": "^0.12.7"
   },
   "devDependencies": {
@@ -53,7 +53,7 @@
     "@types/chai": "^4.3.9",
     "@types/chai-like": "^1.1.2",
     "@types/chai-things": "^0.0.37",
-    "@types/chrome": "0.0.248",
+    "@types/chrome": "0.0.249",
     "@types/mocha": "^10.0.3",
     "@types/node": "^20.8.10",
     "@types/simulant": "^0.2.1",
@@ -63,7 +63,7 @@
     "@typescript-eslint/parser": "^6.9.1",
     "@web/test-runner": "^0.17.3",
     "@web/test-runner-browserstack": "^0.7.0",
-    "@web/test-runner-commands": "^0.8.2",
+    "@web/test-runner-commands": "^0.9.0",
     "@web/test-runner-chrome": "^0.15.0",
     "@web/test-runner-puppeteer": "^0.15.0",
     "@web/test-runner-visual-regression": "^0.8.3",
