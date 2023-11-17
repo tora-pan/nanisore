@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.2",
-    "@commitlint/config-conventional": "^18.4.0",
+    "@commitlint/config-conventional": "^18.4.2",
     "@esm-bundle/chai": "^4.3.4",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^6.0.3",
@@ -88,7 +88,7 @@
     "is-docker": "^3.0.0",
     "prettier": "^3.1.0",
     "prettier-plugin-jsdoc": "^1.1.1",
-    "semantic-release": "^22.0.7",
+    "semantic-release": "^22.0.8",
     "semantic-release-chrome": "^3.2.0",
     "simulant": "^0.2.2",
     "sinon": "^17.0.1",
