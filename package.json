@@ -41,7 +41,7 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.2",
+    "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.2",
     "@esm-bundle/chai": "^4.3.4",
     "@semantic-release/changelog": "^6.0.3",
@@ -58,9 +58,9 @@
     "@types/node": "^20.9.3",
     "@types/simulant": "^0.2.2",
     "@types/sinon-chai": "^3.2.12",
-    "@types/sinon-chrome": "^2.2.14",
+    "@types/sinon-chrome": "^2.2.15",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
-    "@typescript-eslint/parser": "^6.11.0",
+    "@typescript-eslint/parser": "^6.12.0",
     "@web/test-runner": "^0.18.0",
     "@web/test-runner-browserstack": "^0.7.0",
     "@web/test-runner-commands": "^0.9.0",
@@ -101,7 +101,7 @@
     "stylelint-order": "^6.0.3",
     "ts-lit-plugin": "^2.0.1",
     "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   },
   "overrides": {
     "esbuild": "0.14.0",
