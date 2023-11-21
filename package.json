@@ -41,7 +41,7 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.2",
+    "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.2",
     "@esm-bundle/chai": "^4.3.4",
     "@semantic-release/changelog": "^6.0.3",
