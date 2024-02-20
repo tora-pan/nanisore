@@ -62,7 +62,7 @@
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.2",
     "@web/test-runner": "^0.18.0",
-    "@web/test-runner-browserstack": "^0.7.0",
+    "@web/test-runner-browserstack": "^0.7.1",
     "@web/test-runner-commands": "^0.9.0",
     "@web/test-runner-chrome": "^0.15.0",
     "@web/test-runner-puppeteer": "^0.15.0",
