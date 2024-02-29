@@ -41,7 +41,7 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.0.0",
+    "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.0",
     "@esm-bundle/chai": "^4.3.4",
     "@semantic-release/changelog": "^6.0.3",
@@ -71,7 +71,7 @@
     "chai-like": "^1.1.1",
     "chai-things": "^0.2.0",
     "conventional-changelog-conventionalcommits": "^7.0.2",
-    "csv-parse": "^5.5.4",
+    "csv-parse": "^5.5.5",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
