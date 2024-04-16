@@ -41,7 +41,7 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.2.1",
+    "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
     "@esm-bundle/chai": "^4.3.4",
     "@semantic-release/changelog": "^6.0.3",
@@ -60,7 +60,7 @@
     "@types/sinon-chai": "^3.2.12",
     "@types/sinon-chrome": "^2.2.15",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
-    "@typescript-eslint/parser": "^7.6.0",
+    "@typescript-eslint/parser": "^7.7.0",
     "@web/test-runner": "^0.18.1",
     "@web/test-runner-browserstack": "^0.7.1",
     "@web/test-runner-commands": "^0.9.0",
