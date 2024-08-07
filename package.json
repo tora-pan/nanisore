@@ -41,7 +41,7 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
+    "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@esm-bundle/chai": "^4.3.4",
     "@semantic-release/changelog": "^6.0.3",
@@ -80,7 +80,7 @@
     "eslint-plugin-lit": "^1.14.0",
     "eslint-plugin-mocha": "^10.5.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^7.0.0",
+    "eslint-plugin-promise": "^7.1.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
     "eslint-plugin-tsdoc": "^0.3.0",
     "husky": "^9.1.4",
