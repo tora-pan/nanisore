@@ -1,19 +1,24 @@
 queue_rules:
-  - name: default
-    conditions: [] # no extra conditions needed to get merged
-
-pull_request_rules:
-  - name: Auto-merge dependabot
-    conditions:
-      # Also covered by Github protections but this reduces noise from mergify.
+  - name: duplicated default from Auto-merge dependabot
+    queue_conditions:
       - "#approved-reviews-by>=1"
       - author=dependabot[bot]
-    actions:
-      queue:
-        name: default
-        # Each PR is one commit, but mergify may add merge commits when updating.
-        method: squash
+    merge_conditions: []
+    merge_method: squash
+  - name: duplicated default from Automatic merge when Github conditions pass
+    queue_conditions:
+      - "#approved-reviews-by>=1"
+      - base=main
+      - label!=work-in-progress
+      - label!='changes requested'
+      - author~=^(?:(?!dependabot).)*$
+    merge_conditions: []
+    commit_message_template: |
+      {{ title }} (#{{ number }})
+      {{ body }}
+    merge_method: squash
 
+pull_request_rules:
   - name: Have Dependabot rebase when conflict at head of queue
     # It's not unusual for there to be a conflict between subsequent dependabot
     # requests, dependabot knows best how to solve these.
@@ -36,24 +41,7 @@ pull_request_rules:
         type: APPROVE
         message: "tora-pan says it's fine so hopefully it's fine!"
 
-  - name: Automatic merge when Github conditions pass
-    conditions:
-      # Also covered by Github protections but this reduces noise from mergify.
-      - "#approved-reviews-by>=1"
-      # Don't try to merge stacked pull requests into non merged parents.
-      - base=main
-      # Allow individuals to opt out of mergify on high churn PRs
-      - label!=work-in-progress
-      # Allow marking a PR as expecting changes while also approving
-      - label!='changes requested'
-      # Don't run on PRs by dependabot (or users with dependabot in their name)
-      - author~=^(?:(?!dependabot).)*$
+  - name: Auto-merge dependabot + Automatic merge when Github conditions pass
+    conditions: []
     actions:
       queue:
-        name: default
-        # Each PR is one commit, but may have extras added during review so squash.
-        method: squash
-        # Uses original PR title and body for squashed commit message.
-        commit_message_template: |
-          {{ title }} (#{{ number }})
-          {{ body }}
