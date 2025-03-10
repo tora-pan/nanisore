@@ -41,7 +41,7 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.7.1",
+    "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.7.1",
     "@esm-bundle/chai": "^4.3.4",
     "@semantic-release/changelog": "^6.0.3",
@@ -55,7 +55,7 @@
     "@types/chai-things": "^0.0.38",
     "@types/chrome": "0.0.308",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^22.13.9",
+    "@types/node": "^22.13.10",
     "@types/simulant": "^0.2.2",
     "@types/sinon-chai": "^4.0.0",
     "@types/sinon-chrome": "^2.2.15",
