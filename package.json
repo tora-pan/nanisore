@@ -58,7 +58,7 @@
     "@types/node": "^22.15.3",
     "@types/simulant": "^0.2.2",
     "@types/sinon-chai": "^4.0.0",
-    "@types/sinon-chrome": "^2.2.15",
+    "@types/sinon-chrome": "^2.2.16",
     "@typescript-eslint/eslint-plugin": "^8.31.1",
     "@typescript-eslint/parser": "^8.31.1",
     "@web/test-runner": "^0.20.1",
